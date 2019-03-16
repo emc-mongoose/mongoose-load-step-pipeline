@@ -12,4 +12,5 @@ FROM emcmongoose/mongoose-base:${BASE_VERSION}
 ARG BASE_VERSION
 ARG VERSION
 COPY --from=0 /build/libs/mongoose-load-step-pipeline-${VERSION}.jar /tmp/
+RUN mkdir -p $HOME/.mongoose/${BASE_VERSION}/ext
 RUN mv -f /tmp/mongoose-load-step-pipeline-*.jar $HOME/.mongoose/${BASE_VERSION}/ext/
