@@ -1,3 +1,11 @@
+[![Gitter chat](https://badges.gitter.im/emc-mongoose.png)](https://gitter.im/emc-mongoose)
+[![Issue Tracker](https://img.shields.io/badge/Issue-Tracker-red.svg)](https://mongoose-issues.atlassian.net/projects/GOOSE)
+[![CI status](https://gitlab.com/emc-mongoose/mongoose-load-step-pipeline/badges/master/pipeline.svg)](https://gitlab.com/emc-mongoose/mongoose-load-step-pipeline/commits/master)
+[![Tag](https://img.shields.io/github/tag/emc-mongoose/mongoose-load-step-pipeline.svg)](https://github.com/emc-mongoose/mongoose-load-step-pipeline/tags)
+[![Maven metadata URL](https://img.shields.io/maven-metadata/v/http/central.maven.org/maven2/com/github/emc-mongoose/mongoose-load-step-pipeline/maven-metadata.xml.svg)](http://central.maven.org/maven2/com/github/emc-mongoose/mongoose-load-step-pipeline)
+[![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/http/oss.sonatype.org/com.github.emc-mongoose/mongoose-load-step-pipeline.svg)](http://oss.sonatype.org/com.github.emc-mongoose/mongoose-load-step-pipeline)
+[![Docker Pulls](https://img.shields.io/docker/pulls/emcmongoose/mongoose-load-step-pipeline.svg)](https://hub.docker.com/r/emcmongoose/mongoose-load-step-pipeline/)
+
 # Introduction
 
 The basic load step executes the same type of operation for each item
