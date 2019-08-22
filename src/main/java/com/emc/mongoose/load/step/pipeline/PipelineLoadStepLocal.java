@@ -152,19 +152,21 @@ public class PipelineLoadStepLocal
 										outputConfig.boolVal("metrics-trace-persist"));
 						stepContexts.add(stepCtx);
 
+						final var itemOutputConfig = itemConfig.configVal("output");
 						if (originIndex < subStepCount - 1) {
 							final long itemOutputDelay;
-							final Object itemOutputDelayRaw = itemConfig.val("output-delay");
+							final Object itemOutputDelayRaw = itemOutputConfig.val("delay");
 							if (itemOutputDelayRaw instanceof String) {
 								itemOutputDelay = TimeUtil.getTimeInSeconds((String) itemOutputDelayRaw);
 							} else {
 								itemOutputDelay = TypeUtil.typeConvert(itemOutputDelayRaw, long.class);
 							}
+							final var outputQueueLimit = itemOutputConfig.intVal("queue-limit");
 							nextItemBuff = new DelayedTransferConvertBuffer<>(
-											storageConfig.intVal("driver-limit-queue-output"), itemOutputDelay, TimeUnit.SECONDS);
+											outputQueueLimit, itemOutputDelay, TimeUnit.SECONDS);
 							stepCtx.operationsResultsOutput(nextItemBuff);
 						} else {
-							final String itemOutputFile = itemConfig.stringVal("output-file");
+							final String itemOutputFile = itemOutputConfig.stringVal("file");
 							if (itemOutputFile != null && itemOutputFile.length() > 0) {
 								final Path itemOutputPath = Paths.get(itemOutputFile);
 								if (Files.exists(itemOutputPath)) {

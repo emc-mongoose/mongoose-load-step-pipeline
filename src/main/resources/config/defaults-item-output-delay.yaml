@@ -3,4 +3,6 @@
 # the command line arguments either load step configurations in the scenario files instead.
 item:
   output:
+    buffer:
+      limit: 1000000
     delay: 0

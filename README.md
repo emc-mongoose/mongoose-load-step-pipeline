@@ -80,7 +80,7 @@ The minimum delay between the subsequent operations for each item.
 0 (default value) means no delay. Accepts a time value (0, 1, "2s",
 "3m", "4h").
 
-2. `storage-driver-queue-output`
+2. `item-output-queue-limit`
 
 The count limit for the items which may be temporarily stored in the
 exchange buffer is limited in order to avoid the memory exhaustion.
